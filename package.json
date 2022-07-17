@@ -26,5 +26,6 @@
     "url": "https://github.com/java152001/exampleHerokuDeploy/issues"
   },
   "homepage": "https://github.com/java152001/exampleHerokuDeploy#readme",
+  "devDependencies": {},
   "description": ""
 }
