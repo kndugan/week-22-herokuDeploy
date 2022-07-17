@@ -1,0 +1,30 @@
+{
+  "name": "week-22-examples",
+  "version": "1.0.0",
+  "main": "http-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install",
+    "start": "node http-server.js"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "lowdb": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/java152001/exampleHerokuDeploy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/java152001/exampleHerokuDeploy/issues"
+  },
+  "homepage": "https://github.com/java152001/exampleHerokuDeploy#readme",
+  "description": ""
+}

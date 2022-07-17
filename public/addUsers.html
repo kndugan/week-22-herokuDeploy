@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- libraries & styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+<script src = "faker.min.js" type = "text/javascript"></script> 
+
+<!-- user interface -->
+<body>
+
+    <div style="padding:50px">    
+        <button class="btn btn-primary" style="font-size: 3em;" onclick="add()">Add 100 Users</button>
+        <div id="status"></div>   
+    </div>
+
+<script>
+function add(){
+    for (let i = 0; i < 100; i++) {        
+        // setup
+        const firstName     = faker.name.firstName();
+        const lastName      = faker.name.lastName();
+        const date          = faker.date.past(50, new Date("Sat Sep 20 1992 21:35:02 GMT+0200 (CEST)"));
+
+        // random data
+        const name          = faker.name.findName(firstName, lastName);
+        const email         = faker.internet.email(firstName, lastName);
+        const username      = faker.internet.userName(firstName, lastName);
+        const password      = faker.internet.password();
+        const phone         = faker.phone.phoneNumber();
+        const streetaddress = faker.address.streetAddress();
+        const citystatezip  = faker.address.city() 
+                                + ", " + faker.address.stateAbbr() + " " 
+                                + faker.address.zipCode();
+        const latitude      = faker.address.latitude();
+        const longitude     = faker.address.longitude();
+        const avatar        = faker.internet.avatar();
+        const dob           = date.getFullYear() + "-" 
+                                + (date.getMonth()+1) + "-" 
+                                + date.getDate();  
+        
+        // user data object for post
+        const user = {
+            name,
+            dob,
+            email,
+            username,
+            password,
+            phone,
+            streetaddress,
+            citystatezip,
+            latitude,
+            longitude,            
+            avatar
+        }
+        
+        // post use data
+        // const url = 'http://138.197.111.251:3001/add';
+        const url = 'http://localhost:3000/add';
+        superagent
+            .post(url)
+            .send(user)
+            .end(function(err,res){
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    console.log(res);                    
+                    if(res.statusCode === 200){
+                        document.getElementById('status').innerHTML = `
+                            <b>Response: Status Code 200.</b> The HTTP 200 OK success status response code indicates that the HTTP request has succeeded.<br>
+                            User: ${name}<br>
+                            ${new Date()}
+                        `;
+                    }
+                }
+            });    
+    }
+}
+
+</script> 
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "name": "Nat Lebsack",
+      "dob": "1954-2-25",
+      "email": "Nat_Lebsack@yahoo.com",
+      "username": "Nat.Lebsack6",
+      "password": "YczFztn9vKRy2As",
+      "phone": "(546) 476-7430 x64789",
+      "streetaddress": "20647 Mosciski Inlet",
+      "citystatezip": "Magnoliachester, PA 39056",
+      "latitude": "52.5924",
+      "longitude": "14.7635",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/adamnac/128.jpg"
+    },
+    {
+      "name": "Uriah Hintz",
+      "dob": "1971-4-7",
+      "email": "Uriah_Hintz@hotmail.com",
+      "username": "Uriah31",
+      "password": "z0aXKnKQXvtzVSo",
+      "phone": "286.674.2057",
+      "streetaddress": "9122 Yazmin Summit",
+      "citystatezip": "Lake Isadoremouth, AR 58303",
+      "latitude": "59.5379",
+      "longitude": "169.8689",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/BroumiYoussef/128.jpg"
+    }
+  ]
+}
