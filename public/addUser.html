@@ -31,7 +31,7 @@ function add(){
                             + faker.address.zipCode();
     const latitude      = faker.address.latitude();
     const longitude     = faker.address.longitude();
-    const avatar        = faker.internet.avatar();
+    const avatar        = `https://picsum.photos/200/200?random=${Math.floor(Math.random() * 1251)}`;
     const dob           = date.getFullYear() + "-" 
                             + (date.getMonth()+1) + "-" 
                             + date.getDate();  
@@ -70,8 +70,8 @@ function add(){
     }
 
     // post user
-    // const url = 'http://104.131.178.189:3001/add';
-    const url = 'http://localhost:3000/add';
+    const url = 'http://164.92.81.253:3001/add';
+    // const url = 'http://localhost:3000/add';
     superagent
         .post(url)
         .send(user)

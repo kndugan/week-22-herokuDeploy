@@ -48,6 +48,15 @@ app.post('/add', function (req, res) {
     res.send(db.get('users').value());
 });
 
+// delete All entries - test using:
+//      curl http://localhost:3001/deleteAll
+// ----------------------------------------------------
+app.get("/deleteAll", function (req, res) {
+    // YOUR CODE
+    db.get("users").remove().write();
+    res.send('All records have been deleted successfully');
+  });
+
 // start server
 // -----------------------
 app.listen(port, function () {
