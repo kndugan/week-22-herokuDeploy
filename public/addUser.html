@@ -8,7 +8,7 @@
 <!-- user interface -->
 <body>  
     <div style="padding:50px">
-        <button type="button" class="btn btn-primary" style="font-size: 3em;" onclick="add()">Add User</button>
+        <button type="button" class="btn btn-primary" style="font-size: 2em;" onclick="add()">Add User</button>
         <div id="status"></div>   
     </div>
     
@@ -31,7 +31,7 @@ function add(){
                             + faker.address.zipCode();
     const latitude      = faker.address.latitude();
     const longitude     = faker.address.longitude();
-    const avatar        = `https://picsum.photos/200/200?random=${Math.floor(Math.random() * 1251)}`;
+    const avatar        = `https://picsum.photos/250/250?random=${Math.floor(Math.random() * 1251)}`;
     const dob           = date.getFullYear() + "-" 
                             + (date.getMonth()+1) + "-" 
                             + date.getDate();  
